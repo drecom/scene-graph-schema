@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "id": "/Schema.json",
+
+  "type": "object",
+  "properties": {
+    "scene": {
+      "type": "array",
+      "items": { "$ref": "/definitions/Node.json#Node" }
+    }
+  },
+  "required": ["scene"]
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "id": "/definitions/Sprite.json",
+
+  "definitions": {
+    "Sprite": {
+      "id": "#Sprite",
+      "type": "object",
+      "properties": {
+        "url":    {
+          "id": "#Sprite_url",
+          "type": "string"
+        },
+        "base64": {
+          "id": "#Sprite_base64",
+          "type": "string"
+        }
+      },
+      "oneOf": [
+        { "required": [ "url"  ] },
+        { "required": [ "name" ] }
+      ]
+    }
+  }
+}

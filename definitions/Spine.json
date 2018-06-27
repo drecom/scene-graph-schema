@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "id": "/definitions/Spine.json",
+
+  "definitions": {
+    "Spine": {
+      "id": "#Spine",
+      "type": "object",
+      "properties": {
+        "url":  {
+          "id": "#Spine_url",
+          "type": "string"
+        },
+        "skin": {
+          "id": "#Spine_skin",
+          "type": "string"
+        },
+        "animation": {
+          "id": "#Spine_animation",
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "loop": {
+              "type": "boolean",
+              "default": true
+            },
+            "offset": {
+              "type": "number",
+              "default": 0
+            }
+          },
+          "required": [
+            "name"
+          ]
+        }
+      },
+      "required": [
+        "url",
+        "skin"
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+
+  "id": "/definitions/Transform.json",
+
+  "definitions": {
+    "Transform": {
+      "id": "#Transform",
+      "type": "object",
+      "properties": {
+        "x": {
+          "id": "#Transform_x",
+          "type": "number"
+        },
+        "y": {
+          "id": "#Transform_x",
+          "type": "number"
+        },
+        "parent": {
+          "id": "#Transform_parent",
+          "$ref": "Node.json#Node_id"
+        },
+        "children": {
+          "id": "#Transform_children",
+          "type":  "array",
+          "items": { "$ref": "Node.json#Node_id" }
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    }
+  }
+}
