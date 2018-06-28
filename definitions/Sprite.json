@@ -18,8 +18,8 @@
         }
       },
       "oneOf": [
-        { "required": [ "url"  ] },
-        { "required": [ "name" ] }
+        { "required": [ "url"    ] },
+        { "required": [ "base64" ] }
       ]
     }
   }
