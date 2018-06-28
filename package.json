@@ -10,7 +10,6 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "json-schema-to-typescript": "^5.5.0",
     "jsonschema": "^1.2.4"
   }
 }
