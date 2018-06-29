@@ -51,7 +51,7 @@
             return;
           }
 
-          if (parent.transform.children.indexOf(id) === -1) {
+          if (!parent.transform.children || parent.transform.children.indexOf(id) === -1) {
             validity = false;
             return;
           }
