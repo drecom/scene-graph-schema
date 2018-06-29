@@ -4,12 +4,17 @@
   "description": "scene-graph-schema is a intermediate data schema that represents common data structure of a scene in game application.",
   "main": "index.js",
   "scripts": {
-    "example": "node examples/example.js"
+    "example": "node examples/example.js",
+    "test": "mocha test/index.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "jsonschema": "^1.2.4"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "power-assert": "^1.6.0"
   }
 }
