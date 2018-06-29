@@ -1,48 +1,68 @@
 var fs   = require('fs');
 var path = require('path');
-var JsonSchema = require('jsonschema');
+var validator = require('../');
 
-var validator = new JsonSchema.Validator();
+var rootDir    = path.resolve(path.join(__dirname, '..'));
+var exampleDir = __dirname;
 
-var rootDir        = path.resolve(path.join(__dirname, '..'));
-var exampleDir     = __dirname;
-var definitionsDir = path.join(rootDir, 'definitions');
-
-LoadSchemaDefinitions: {
-  var entities = fs.readdirSync(definitionsDir);
-  var schemaPattern = /\.json$/;
-  for (var i = 0; i < entities.length; i++) {
-    var entity = entities[i];
-    if (schemaPattern.test(entity)) {
-      var json = fs.readFileSync(path.join(definitionsDir, entity));
-      validator.addSchema(JSON.parse(json));
-    }
-  }
-}
-
-var validResult, invalidResult;
+var validSchemaResult,    invalidSchemaResult;
+var validHierarchyResult, invalidHierarchyResult;
 TestDto: {
-  var schema  = fs.readFileSync(path.join(rootDir, 'Schema.json'));
   var valid   = fs.readFileSync(path.join(exampleDir, 'valid_example.json'));
   var invalid = fs.readFileSync(path.join(exampleDir, 'invalid_example.json'));
 
-  var schemaJson  = JSON.parse(schema);
   var validJson   = JSON.parse(valid);
   var invalidJson = JSON.parse(invalid);
 
-  validResult   = validator.validate(validJson, schemaJson);
-  invalidResult = validator.validate(invalidJson, schemaJson);
+  validSchemaResult   = validator.validateSchema(validJson);
+  invalidSchemaResult = validator.validateSchema(invalidJson);
+  validHierarchyResult = validator.validateHierarchy({
+    "scene": [
+      {
+        "id": "Parent",
+        "transform": {
+          "children": [ "Child" ]
+        }
+      },
+      {
+        "id": "Child",
+        "transform": {
+          "parent": "Parent"
+        }
+      }
+    ]
+  });
+  invalidHierarchyResult = validator.validateHierarchy({
+    "scene": [
+      {
+        "id": "Parent",
+        "transform": {
+          "children": [ "Child" ]
+        }
+      },
+      {
+        "id": "Child",
+        "transform": {}
+      }
+    ]
+  });
 }
 
 Report: {
   var logLines = [];
-  logLines.push("valid schema should not have any error");
-  logLines.push("error count : " + validResult.errors.length);
+  logLines.push("valid dto should not have any schema error");
+  logLines.push("error count : " + validSchemaResult.errors.length);
   logLines.push("\n");
-  logLines.push("invalid schema errors");
-  for (var i = 0; i < invalidResult.errors.length; i++) {
-    logLines.push(invalidResult.errors[i].stack);
+  logLines.push("invalid dto should have schema errors");
+  for (var i = 0; i < invalidSchemaResult.errors.length; i++) {
+    logLines.push(invalidSchemaResult.errors[i].stack);
   }
+  logLines.push("\n");
+  logLines.push("valid dto should not have any hierarchical error");
+  logLines.push("is valid : " + validHierarchyResult);
+  logLines.push("\n");
+  logLines.push("invalid dto should have hierarchical error");
+  logLines.push("is valid : " + invalidHierarchyResult);
 
   console.log(logLines.join("\n"));
 }
