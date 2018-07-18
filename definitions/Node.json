@@ -8,9 +8,9 @@
       "id": "#Node",
       "type": "object",
       "properties": {
-        "id":          { "type": "string" },
-        "name":        { "type": "string" },
-        "constructor": { "type": "string" },
+        "id":              { "type": "string" },
+        "name":            { "type": "string" },
+        "constructorName": { "type": "string" },
 
         "transform": { "$ref": "Transform.json#/definitions/Transform" },
         "spine":     { "$ref": "Spine.json#/definitions/Spine" },
@@ -20,7 +20,7 @@
       "required": [
         "id",
         "name",
-        "constructor",
+        "constructorName",
         "transform"
       ]
     }

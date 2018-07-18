@@ -11,7 +11,7 @@ export interface SchemaJson {
 export interface Node {
   id: string;
   name: string;
-  constructor: string;
+  constructorName: string;
   transform: Transform;
   spine?: Spine;
   sprite?: Sprite;

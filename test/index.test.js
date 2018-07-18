@@ -13,7 +13,7 @@ describe('scene-graph-schema', () => {
         'scene':[{
           "id":"",
           "name":"",
-          "constructor":"",
+          "constructorName":"",
           "transform":{"x":0,"y":0}
         }]
       }).errors.length, 0);
@@ -24,12 +24,12 @@ describe('scene-graph-schema', () => {
       assert.strictEqual(sceneGraphSchema.validateHierarchy({
         'scene':[{
           "id":"Parent",
-          "constructor":"",
+          "constructorName":"",
           "transform": { "children":["Child"] }
         },
         {
           "id":"Child",
-          "constructor":"",
+          "constructorName":"",
           "transform": { "parent":"Parent" }
         }]
       }), true);

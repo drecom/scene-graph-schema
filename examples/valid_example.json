@@ -3,7 +3,7 @@
     {
       "id": "MyScene",
       "name": "MyScene",
-      "constructor": "Scene",
+      "constructorName": "Scene",
       "transform": {
         "x": 0,
         "y": 0,
@@ -17,7 +17,7 @@
     {
       "id": "container_1",
       "name": "container_1",
-      "constructor": "Container",
+      "constructorName": "Container",
       "transform": {
         "x": 10,
         "y": 10,
@@ -31,7 +31,7 @@
     {
       "id": "sprite_2",
       "name": "sprite_2",
-      "constructor": "Sprite",
+      "constructorName": "Sprite",
       "transform": {
         "x": 130,
         "y": 130,
@@ -45,7 +45,7 @@
     {
       "id": "text_1",
       "name": "text_1",
-      "constructor": "Text",
+      "constructorName": "Text",
       "transform": {
         "x": 40,
         "y": 40,
@@ -63,7 +63,7 @@
     {
       "id": "container_2",
       "name": "container_2",
-      "constructor": "Container",
+      "constructorName": "Container",
       "transform": {
         "x": 15,
         "y": 15,
@@ -76,7 +76,7 @@
     {
       "id": "sprite_1",
       "name": "sprite_1",
-      "constructor": "Sprite",
+      "constructorName": "Sprite",
       "transform": {
         "x": 20,
         "y": 20,
@@ -90,7 +90,7 @@
     {
       "id": "spine_1",
       "name": "spine_1",
-      "constructor": "spine.Spine",
+      "constructorName": "spine.Spine",
       "transform": {
         "x": 200,
         "y": 300,
