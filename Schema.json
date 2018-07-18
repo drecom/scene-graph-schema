@@ -7,7 +7,7 @@
   "properties": {
     "scene": {
       "type": "array",
-      "items": { "$ref": "/definitions/Node.json#Node" }
+      "items": { "$ref": "definitions/Node.json#/definitions/Node" }
     }
   },
   "required": ["scene"]

@@ -8,16 +8,9 @@
       "id": "#Spine",
       "type": "object",
       "properties": {
-        "url":  {
-          "id": "#Spine_url",
-          "type": "string"
-        },
-        "skin": {
-          "id": "#Spine_skin",
-          "type": "string"
-        },
+        "url":  { "type": "string" },
+        "skin": { "type": "string" },
         "animation": {
-          "id": "#Spine_animation",
           "type": "object",
           "properties": {
             "name": { "type": "string" },

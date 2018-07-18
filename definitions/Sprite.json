@@ -8,19 +8,9 @@
       "id": "#Sprite",
       "type": "object",
       "properties": {
-        "url":    {
-          "id": "#Sprite_url",
-          "type": "string"
-        },
-        "base64": {
-          "id": "#Sprite_base64",
-          "type": "string"
-        }
-      },
-      "oneOf": [
-        { "required": [ "url"    ] },
-        { "required": [ "base64" ] }
-      ]
+        "url":    { "type": "string" },
+        "base64": { "type": "string" }
+      }
     }
   }
 }

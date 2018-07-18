@@ -8,35 +8,14 @@
       "id": "#Node",
       "type": "object",
       "properties": {
-        "id": {
-          "id": "#Node_id",
-          "type": "string"
-        },
-        "name": {
-          "id": "#Node_name",
-          "type": "string"
-        },
-        "constructor": {
-          "id": "#Node_constructor",
-          "type": "string"
-        },
-        "transform": {
-          "id": "#Node_transform",
-          "$ref": "Transform.json#Transform"
-        },
+        "id":          { "type": "string" },
+        "name":        { "type": "string" },
+        "constructor": { "type": "string" },
 
-        "spine": {
-          "id": "#Node_spine",
-          "$ref": "Spine.json#Spine"
-        },
-        "sprite": {
-          "id": "#Node_sprite",
-          "$ref": "Sprite.json#Sprite"
-        },
-        "text": {
-          "id": "#Node_text",
-          "$ref": "Text.json#Text"
-        }
+        "transform": { "$ref": "Transform.json#/definitions/Transform" },
+        "spine":     { "$ref": "Spine.json#/definitions/Spine" },
+        "sprite":    { "$ref": "Sprite.json#/definitions/Sprite" },
+        "text":      { "$ref": "Text.json#/definitions/Text" }
       },
       "required": [
         "id",

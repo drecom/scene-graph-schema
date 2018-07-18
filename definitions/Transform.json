@@ -8,22 +8,12 @@
       "id": "#Transform",
       "type": "object",
       "properties": {
-        "x": {
-          "id": "#Transform_x",
-          "type": "number"
-        },
-        "y": {
-          "id": "#Transform_x",
-          "type": "number"
-        },
-        "parent": {
-          "id": "#Transform_parent",
-          "$ref": "Node.json#Node_id"
-        },
+        "x":      { "type": "number" },
+        "y":      { "type": "number" },
+        "parent": { "type": "string" },
         "children": {
-          "id": "#Transform_children",
           "type":  "array",
-          "items": { "$ref": "Node.json#Node_id" }
+          "items": { "type": "string" }
         }
       },
       "required": [

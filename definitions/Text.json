@@ -8,12 +8,8 @@
       "id": "#Text",
       "type": "object",
       "properties": {
-        "text":  {
-          "id": "#Text_text",
-          "type": "string"
-        },
+        "text":  { "type": "string" },
         "style": {
-          "id": "#Text_style",
           "type": "object",
           "properties": {
             "size": {
