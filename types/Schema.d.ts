@@ -5,6 +5,16 @@
  */
 
 export interface SchemaJson {
+  metadata: {
+    width: number;
+    height: number;
+    positiveCoord: {
+      xRight: boolean;
+      yDown: boolean;
+      [k: string]: any;
+    };
+    [k: string]: any;
+  };
   scene: Node[];
   [k: string]: any;
 }
@@ -19,8 +29,15 @@ export interface Node {
   [k: string]: any;
 }
 export interface Transform {
+  width?: number;
+  height?: number;
   x: number;
   y: number;
+  anchor: {
+    x: number;
+    y: number;
+    [k: string]: any;
+  };
   parent?: string;
   children?: string[];
   [k: string]: any;

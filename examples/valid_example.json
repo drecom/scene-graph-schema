@@ -1,4 +1,12 @@
 {
+  "metadata": {
+    "width": 640,
+    "height": 1136,
+    "positiveCoord": {
+      "xRight": true,
+      "yDown":  false
+    }
+  },
   "scene": [
     {
       "id": "MyScene",
@@ -7,6 +15,10 @@
       "transform": {
         "x": 0,
         "y": 0,
+        "anchor": {
+          "x": 0,
+          "y": 1
+        },
         "children": [
           "container_1",
           "sprite_2",
@@ -21,6 +33,10 @@
       "transform": {
         "x": 10,
         "y": 10,
+        "anchor": {
+          "x": 0,
+          "y": 1
+        },
         "parent": "MyScene",
         "children": [
           "container_2",
@@ -35,6 +51,10 @@
       "transform": {
         "x": 130,
         "y": 130,
+        "anchor": {
+          "x": 0,
+          "y": 1
+        },
         "parent": "MyScene",
         "children": []
       },
@@ -49,6 +69,10 @@
       "transform": {
         "x": 40,
         "y": 40,
+        "anchor": {
+          "x": 0,
+          "y": 1
+        },
         "parent": "MyScene",
         "children": []
       },
@@ -67,6 +91,10 @@
       "transform": {
         "x": 15,
         "y": 15,
+        "anchor": {
+          "x": 0,
+          "y": 1
+        },
         "parent": "container_1",
         "children": [
           "spine_1"
@@ -80,6 +108,10 @@
       "transform": {
         "x": 20,
         "y": 20,
+        "anchor": {
+          "x": 0,
+          "y": 1
+        },
         "parent": "container_1",
         "children": []
       },
@@ -94,6 +126,10 @@
       "transform": {
         "x": 200,
         "y": 300,
+        "anchor": {
+          "x": 0,
+          "y": 1
+        },
         "parent": "container_2",
         "children": []
       },

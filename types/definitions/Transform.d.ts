@@ -12,8 +12,15 @@ export interface DefinitionsTransformJson {
  * via the `definition` "Transform".
  */
 export interface Transform {
+  width?: number;
+  height?: number;
   x: number;
   y: number;
+  anchor: {
+    x: number;
+    y: number;
+    [k: string]: any;
+  };
   parent?: string;
   children?: string[];
   [k: string]: any;

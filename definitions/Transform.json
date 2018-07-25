@@ -8,8 +8,21 @@
       "id": "#Transform",
       "type": "object",
       "properties": {
+        "width":  { "type": "number" },
+        "height": { "type": "number" },
         "x":      { "type": "number" },
         "y":      { "type": "number" },
+        "anchor": {
+          "type": "object",
+          "properties": {
+            "x":      { "type": "number" },
+            "y":      { "type": "number" }
+          },
+          "required": [
+            "x",
+            "y"
+          ]
+        },
         "parent": { "type": "string" },
         "children": {
           "type":  "array",
@@ -18,7 +31,8 @@
       },
       "required": [
         "x",
-        "y"
+        "y",
+        "anchor"
       ]
     }
   }
