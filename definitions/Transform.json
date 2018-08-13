@@ -8,15 +8,27 @@
       "id": "#Transform",
       "type": "object",
       "properties": {
-        "width":  { "type": "number" },
-        "height": { "type": "number" },
-        "x":      { "type": "number" },
-        "y":      { "type": "number" },
+        "width":    { "type": "number" },
+        "height":   { "type": "number" },
+        "x":        { "type": "number" },
+        "y":        { "type": "number" },
+        "rotation": { "type": "number" },
+        "scale": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" }
+          },
+          "required": [
+            "x",
+            "y"
+          ]
+        },
         "anchor": {
           "type": "object",
           "properties": {
-            "x":      { "type": "number" },
-            "y":      { "type": "number" }
+            "x": { "type": "number" },
+            "y": { "type": "number" }
           },
           "required": [
             "x",
