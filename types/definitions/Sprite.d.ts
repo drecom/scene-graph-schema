@@ -14,5 +14,14 @@ export interface DefinitionsSpriteJson {
 export interface Sprite {
   url?: string;
   base64?: string;
+  atlasUrl?: string;
+  frameName?: string;
+  slice?: {
+    top?: number;
+    bottom?: number;
+    left?: number;
+    right?: number;
+    [k: string]: any;
+  };
   [k: string]: any;
 }

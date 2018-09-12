@@ -4,19 +4,19 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface DefinitionsTextJson {
+export interface DefinitionsRendererJson {
   [k: string]: any;
 }
 /**
- * This interface was referenced by `DefinitionsTextJson`'s JSON-Schema
- * via the `definition` "Text".
+ * This interface was referenced by `DefinitionsRendererJson`'s JSON-Schema
+ * via the `definition` "Renderer".
  */
-export interface Text {
-  text: string;
-  style: {
-    size?: number;
-    horizontalAlign?: number;
-    color?: string;
+export interface Renderer {
+  color?: {
+    r: number;
+    g: number;
+    b: number;
+    a: number;
     [k: string]: any;
   };
   [k: string]: any;
