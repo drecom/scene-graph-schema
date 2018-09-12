@@ -16,6 +16,12 @@ export interface Transform {
   height?: number;
   x: number;
   y: number;
+  rotation?: number;
+  scale?: {
+    x: number;
+    y: number;
+    [k: string]: any;
+  };
   anchor: {
     x: number;
     y: number;

@@ -16,6 +16,7 @@ export interface Node {
   name: string;
   constructorName: string;
   transform: Transform;
+  renderer?: Renderer;
   spine?: Spine;
   sprite?: Sprite;
   text?: Text;
@@ -26,6 +27,12 @@ export interface Transform {
   height?: number;
   x: number;
   y: number;
+  rotation?: number;
+  scale?: {
+    x: number;
+    y: number;
+    [k: string]: any;
+  };
   anchor: {
     x: number;
     y: number;
@@ -33,6 +40,16 @@ export interface Transform {
   };
   parent?: string;
   children?: string[];
+  [k: string]: any;
+}
+export interface Renderer {
+  color?: {
+    r: number;
+    g: number;
+    b: number;
+    a: number;
+    [k: string]: any;
+  };
   [k: string]: any;
 }
 export interface Spine {
@@ -49,12 +66,22 @@ export interface Spine {
 export interface Sprite {
   url?: string;
   base64?: string;
+  atlasUrl?: string;
+  frameName?: string;
+  slice?: {
+    top?: number;
+    bottom?: number;
+    left?: number;
+    right?: number;
+    [k: string]: any;
+  };
   [k: string]: any;
 }
 export interface Text {
   text: string;
   style: {
     size?: number;
+    horizontalAlign?: number;
     color?: string;
     [k: string]: any;
   };
